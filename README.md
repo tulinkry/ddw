@@ -18,3 +18,5 @@ php application for searching. Try to navigate to localhost/<the directory with 
 
 It loads the json file into the memory and for every input it evaluates the sentence against the model printing out
 the rankings of all languages. If no language is recognized it warns user that it could not find a suitable language.
+
+[ddw/Screenshot from 2016-04-06 00:27:54.png](screenshot)
