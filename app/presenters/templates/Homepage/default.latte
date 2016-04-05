@@ -1,0 +1,32 @@
+{block content}
+
+
+{control analyzeForm}
+
+<div class="panel panel-warning">
+	<div class="panel-heading">
+		<h2>Results</h2>
+	</div>
+	<div class="panel-body">
+		{if count($languages)}
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Language</th>
+					<th>Probability</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr n:foreach="$languages as $lang => $score">
+					<th>{$iterator->counter}</th>
+					<td>{$lang}</td>
+					<td>{$score}%</td>
+				</tr>
+			</tbody>
+		</table>
+		{else}
+			<h3>No language identified</h3>
+		{/if}
+	</div>
+</div>

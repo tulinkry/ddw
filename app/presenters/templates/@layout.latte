@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css" />
+
+	<title>{ifset title}{include title|striptags} | {/ifset}Language analyzator</title>
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" n:class="flash, alert, alert-$flash->type">{$flash->message}</div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Recognize the language!</h1>
+		</div>
+	</div>
+
+	<div class="container">
+
+
+	{include content}
+
+	</div>
+
+	{block scripts}
+	<script src="{$basePath}/js/jquery.min.js"></script>
+	<script src="{$basePath}/js/bootstrap.min.js"></script>
+	<script src="{$basePath}/js/nette.forms.min.js"></script>
+	{/block}
+</body>
+</html>
